@@ -1,0 +1,24 @@
+<p>employee-form works!</p>
+<p>my-form works!</p>
+<form [formGroup]="myProductForm" (submit)="myOnSubmit()">
+<div>
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+  
+</div>
+
+<div>
+    <label>Number Id:</label>
+    <input type="text" formControlName="numberId" >
+  
+</div>
+
+<div>
+    <label>Adress:</label>
+    <input type="text" formControlName="adress" >
+  
+</div>
+<!-- [disabled]="this.myProductForm.invalid"מעדכן את הכפתור שיהיה קפוא ברגע שהטופס לא חוקי ,לפי הגדרות השדה שהוגדרו -->
+<button type="submit"  [disabled]="this.myProductForm.invalid">send</button>
+</form> 
+<app-messegs></app-messegs>
